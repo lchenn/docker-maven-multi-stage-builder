@@ -2,6 +2,6 @@
 
 Cache the maven dependencies used by maen, got the idea from  https://github.com/carlossg/docker-maven#packaging-a-local-repository-with-the-image
 
-Use make use the cache, add a `-s /usr/share/maven/ref/settings-docker.xml` option to the maven command
+Use make use the cache, simply use this as 1st stage of the builder
 
 

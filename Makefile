@@ -5,7 +5,7 @@ ARTIFACT := maven-multi-stage-builder
 FULL_NAME   := ${DOCKER_HOST}/${DOCKER_ID_USER}/${ARTIFACT}
 GIT_HASH    := $$(git log -1 --pretty=%h)
 LATEST := latest
-VERSION := 1.0.2
+VERSION := 1.0.3
 
 .PHONY: build push login
 
