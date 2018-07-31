@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>spring-boot-starter-parent</artifactId>
     <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.5.13.RELEASE</version>
     <relativePath></relativePath>
   </parent>
@@ -28,273 +28,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-ldap</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-cache</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web-services</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-dependencies</artifactId>
-      <version>Camden.SR6</version>
-      <type>pom</type>
-      <scope>import</scope>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-classic</artifactId>
-      <version>${logback.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>${logback.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.amazonaws</groupId>
-      <artifactId>aws-java-sdk-s3</artifactId>
-      <version>1.11.125</version>
-    </dependency>
-
-    <!-- Guava -->
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>21.0</version>
-    </dependency>
-
-    <!-- grpc -->
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-protobuf</artifactId>
-      <version>${grpc.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-stub</artifactId>
-      <version>${grpc.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-netty</artifactId>
-      <version>${grpc.version}</version>
-    </dependency>
-
-    <!-- protobuf -->
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java</artifactId>
-      <version>${protobuf.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.protobuf</groupId>
-      <artifactId>protobuf-java-util</artifactId>
-      <version>${protobuf.version}</version>
-    </dependency>
-
-    <!-- Protobuf java format -->
-    <dependency>
-      <groupId>com.googlecode.protobuf-java-format</groupId>
-      <artifactId>protobuf-java-format</artifactId>
-      <version>1.4</version>
-    </dependency>
-
-    <!-- ElasticSearch rest client -->
-    <dependency>
-      <groupId>org.elasticsearch.client</groupId>
-      <artifactId>rest</artifactId>
-      <version>5.2.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-core</artifactId>
-      <version>2.8.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.8.7</version>
-    </dependency>
-
-    <!-- Prometheus -->
-    <dependency>
-      <groupId>io.prometheus</groupId>
-      <artifactId>simpleclient</artifactId>
-      <version>${prometheus.simpleclient.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.prometheus</groupId>
-      <artifactId>simpleclient_spring_boot</artifactId>
-      <version>${prometheus.simpleclient.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.prometheus</groupId>
-      <artifactId>simpleclient_pushgateway</artifactId>
-      <version>${prometheus.simpleclient.version}</version>
-    </dependency>
-
-    <!-- Prometheus gRPC -->
-    <dependency>
-      <groupId>me.dinowernli</groupId>
-      <artifactId>java-grpc-prometheus</artifactId>
-      <version>0.3.0</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>grpc-all</artifactId>
-          <groupId>io.grpc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>grpc-okhttp</artifactId>
-          <groupId>io.grpc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>grpc-core</artifactId>
-          <groupId>io.grpc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>simpleclient</artifactId>
-          <groupId>io.prometheus</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <!-- Memcached -->
-    <dependency>
-      <groupId>com.amazonaws</groupId>
-      <artifactId>elasticache-java-cluster-client</artifactId>
-      <version>1.1.1</version>
-    </dependency>
-
-    <!-- Spring boot gRPC -->
-    <dependency>
-      <groupId>org.lognet</groupId>
-      <artifactId>grpc-spring-boot-starter</artifactId>
-      <version>2.3.1</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>grpc-netty</artifactId>
-          <groupId>io.grpc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-boot-starter</artifactId>
-          <groupId>org.springframework.boot</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
-    <!-- @Inject -->
-    <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-      <version>1</version>
-    </dependency>
-    <!--lombak-->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lombok.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt</artifactId>
-      <version>0.9.0</version>
-    </dependency>
-
-    <!-- FindBugs annotations, e.g. @SuppressFBWarnings-->
-    <dependency>
-      <groupId>com.google.code.findbugs</groupId>
-      <artifactId>annotations</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.findbugs</groupId>
-      <artifactId>jsr305</artifactId>
-      <version>3.0.1</version>
-    </dependency>
-    <!-- Slf4j API -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.truth</groupId>
-      <artifactId>truth</artifactId>
-      <version>0.32</version>
-    </dependency>
-    <dependency>
-      <groupId>org.mockito</groupId>
-      <artifactId>mockito-core</artifactId>
-      <version>2.8.47</version>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.plexus</groupId>
-      <artifactId>plexus-compiler-javac-errorprone</artifactId>
-      <version>2.8.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.puppycrawl.tools</groupId>
-      <artifactId>checkstyle</artifactId>
-      <version>8.10.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.errorprone</groupId>
-      <artifactId>error_prone_core</artifactId>
-      <version>2.3.1</version>
-    </dependency>
-
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
@@ -346,6 +79,11 @@
       <version>3.0.1</version>
     </dependency>
     <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_core</artifactId>
+      <version>2.3.1</version>
+    </dependency>
+    <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
       <version>21.0</version>
@@ -376,14 +114,14 @@
       <version>1.4.197</version>
     </dependency>
     <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>1.4.197</version>
-    </dependency>
-    <dependency>
       <groupId>com.opencsv</groupId>
       <artifactId>opencsv</artifactId>
       <version>4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.puppycrawl.tools</groupId>
+      <artifactId>checkstyle</artifactId>
+      <version>8.10.1</version>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
@@ -399,6 +137,11 @@
       <groupId>io.grpc</groupId>
       <artifactId>grpc-stub</artifactId>
       <version>1.10.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>0.9.0</version>
     </dependency>
     <dependency>
       <groupId>io.prometheus</groupId>
@@ -426,6 +169,29 @@
       <version>4.12</version>
     </dependency>
     <dependency>
+      <groupId>me.dinowernli</groupId>
+      <artifactId>java-grpc-prometheus</artifactId>
+      <version>0.3.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-all</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-okhttp</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-core</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.prometheus</groupId>
+          <artifactId>simpleclient</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.46</version>
@@ -451,6 +217,11 @@
       <version>1.9.0</version>
     </dependency>
     <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-compiler-javac-errorprone</artifactId>
+      <version>2.8.3</version>
+    </dependency>
+    <dependency>
       <groupId>org.elasticsearch.client</groupId>
       <artifactId>rest</artifactId>
       <version>5.2.2</version>
@@ -464,16 +235,26 @@
       <groupId>org.lognet</groupId>
       <artifactId>grpc-spring-boot-starter</artifactId>
       <version>2.3.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.grpc</groupId>
+          <artifactId>grpc-netty</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>2.8.47</version>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>42.1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.16.16</version>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -542,8 +323,8 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-feign</artifactId>
-      <version>1.2.6.RELEASE</version>
+      <artifactId>spring-cloud-dependencies</artifactId>
+      <version>Camden.SR6</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -575,35 +356,9 @@
       <artifactId>spring-jdbc</artifactId>
       <version>4.3.8.RELEASE</version>
     </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>4.3.17.RELEASE</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>4.3.7.RELEASE</version>
-    </dependency>
-
   </dependencies>
 
-  <repositories>
-    <repository>
-      <id>central</id>
-      <name>Maven Plugin Repository</name>
-      <url>http://repo.maven.apache.org/maven2</url>
-    </repository>
-  </repositories>
-
   <build>
-    <extensions>
-      <extension>
-        <groupId>kr.motd.maven</groupId>
-        <artifactId>os-maven-plugin</artifactId>
-        <version>1.4.1.Final</version>
-      </extension>
-    </extensions>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -613,6 +368,19 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <!-- workaround for http://jira.codehaus.org/browse/MCOMPILER-202 -->
+          <forceJavacCompilerUse>true</forceJavacCompilerUse>
+          <!-- Config ror error prone -->
+          <compilerId>javac-with-errorprone</compilerId>
+          <compilerArgs>
+            <!-- Temp workaround for https://github.com/google/error-prone/issues/780 -->
+            <arg>-Xep:NestedInstanceOfConditions:OFF</arg>
+            <arg>-Xep:ParameterName:OFF</arg>
+          </compilerArgs>
+        </configuration>
         <dependencies>
           <dependency>
             <groupId>org.codehaus.plexus</groupId>
@@ -627,19 +395,6 @@
             <version>2.3.1</version>
           </dependency>
         </dependencies>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <!-- workaround for http://jira.codehaus.org/browse/MCOMPILER-202 -->
-          <forceJavacCompilerUse>true</forceJavacCompilerUse>
-          <!-- Config ror error prone -->
-          <compilerId>javac-with-errorprone</compilerId>
-          <compilerArgs>
-            <!-- Temp workaround for https://github.com/google/error-prone/issues/780 -->
-            <arg>-Xep:NestedInstanceOfConditions:OFF</arg>
-            <arg>-Xep:ParameterName:OFF</arg>
-          </compilerArgs>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -659,28 +414,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${maven.checkstyle.plugin.version}</version>
-        <executions>
-          <!-- Ensures that Checkstyle inspects source code when project is compiled. -->
-          <execution>
-            <id>checkstyle</id>
-            <phase>package</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>8.10.1</version>
-          </dependency>
-          <dependency>
-            <groupId>com.cambiahealth.ai</groupId>
-            <artifactId>checkstyle-resources</artifactId>
-            <version>1.0.1</version>
-          </dependency>
-        </dependencies>
         <configuration>
           <encoding>UTF-8</encoding>
           <linkXRef>false</linkXRef>
@@ -693,27 +426,49 @@
             <sourceDirectory>src/test/java</sourceDirectory>
           </sourceDirectories>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>8.10.1</version>
+          </dependency>
+          <dependency>
+            <groupId>com.cambiahealth.ai</groupId>
+            <artifactId>checkstyle-resources</artifactId>
+            <version>1.0.1</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <!-- Ensures that Checkstyle inspects source code when project is compiled. -->
+          <execution>
+            <id>checkstyle</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>package</phase>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
         <version>${maven.findbugs.plugin.version}</version>
-        <executions>
-          <!-- Ensures that FindBugs inspects source code when project is compiled. -->
-          <execution>
-            <id>analyze-compile</id>
-            <phase>package</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
           <effort>Max</effort>
           <threshold>Low</threshold>
           <xmlOutput>true</xmlOutput>
           <failOnError>true</failOnError>
         </configuration>
+        <executions>
+          <!-- Ensures that FindBugs inspects source code when project is compiled. -->
+          <execution>
+            <id>analyze-compile</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>package</phase>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -741,6 +496,26 @@
         <version>2.5</version>
       </plugin>
     </plugins>
+    <extensions>
+      <extension>
+        <groupId>kr.motd.maven</groupId>
+        <artifactId>os-maven-plugin</artifactId>
+        <version>1.4.1.Final</version>
+      </extension>
+    </extensions>
   </build>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven Plugin Repository</name>
+      <url>http://repo.maven.apache.org/maven2</url>
+    </repository>
+    <repository>
+      <!--grpc-spring-boot-starter-->
+      <id>jcenter</id>
+      <url>http://jcenter.bintray.com</url>
+    </repository>
+  </repositories>
 
 </project>
