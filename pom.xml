@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -15,7 +17,7 @@
   <name>docker-maven-static-cache</name>
 
   <properties>
-    <grpc.version>1.10.0</grpc.version>
+    <grpc.version>1.18.0</grpc.version>
     <java.version>1.8</java.version>
     <logback.version>1.2.3</logback.version>
     <lombok.versio>1.16.18</lombok.versio>
@@ -23,7 +25,7 @@
     <maven.findbugs.plugin.version>3.0.5</maven.findbugs.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <prometheus.simpleclient.version>0.1.0</prometheus.simpleclient.version>
-    <protobuf.version>3.5.1</protobuf.version>
+    <protobuf.version>3.6.1</protobuf.version>
     <slf4j.version>1.7.22</slf4j.version>
   </properties>
 
@@ -51,22 +53,17 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>2.8.7</version>
+      <version>2.9.8</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.8.7</version>
+      <version>2.9.8</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.uuid</groupId>
       <artifactId>java-uuid-generator</artifactId>
       <version>3.1.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.auto.value</groupId>
-      <artifactId>auto-value</artifactId>
-      <version>1.4.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
@@ -91,12 +88,12 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java-util</artifactId>
-      <version>3.5.1</version>
+      <version>${protobuf.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>3.5.1</version>
+      <version>${protobuf.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.truth</groupId>
@@ -126,17 +123,17 @@
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty</artifactId>
-      <version>1.10.0</version>
+      <version>${grpc.version}</version>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-protobuf</artifactId>
-      <version>1.10.0</version>
+      <version>${grpc.version}</version>
     </dependency>
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>grpc-stub</artifactId>
-      <version>1.10.0</version>
+      <version>${grpc.version}</version>
     </dependency>
     <dependency>
       <groupId>io.jsonwebtoken</groupId>
@@ -214,7 +211,7 @@
     <dependency>
       <groupId>org.apache.parquet</groupId>
       <artifactId>parquet-protobuf</artifactId>
-      <version>1.9.0</version>
+      <version>1.10.1</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
